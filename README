@@ -1,0 +1,119 @@
+Authors: Jack Gularte and Anthony Caballero
+Date: March 11, 2019 
+Class: CPSC 3500
+Assignment: Project Four
+Compiles: make
+Runs with: combo of ./nfsserver $port_number and ./nfsclient $ip_address:$port_number
+
+//// Each team member's name and contributions ////////////
+Team member #1:Jack Gularte
+Contributions: Primary author of the file system functionality. Contributed to the network debugging and completion of process.
+
+Team member #2: xxx
+Contributions: Primary author of the network communication. Contributed to the file system debugging and completion process.
+
+Jack and Anthony: Although we each had a main focus, we helped each other with both sides of the code. 
+
+...
+
+//// Strengths and Weaknesses ///////////
+Strengths: Implements all the functions well. Results are correct. Successful communication between client and server. 
+Weaknesses: Code is rigid and not the most fluid. Could be implemented in a more concise manner. Send line by line instead of packet to parse. 
+
+
+
+
+//// My own rating on the functionality ///////////////////
+Rating: A, B, C, D, or F?
+Explanation: B: 13
+Functions could be implemented in a more concise way. It may not run the quickest because of 
+how rigid the code is. 
+...
+
+
+
+
+//// Test cases ///////////////////////////////////////////
+Test case #1: ls
+Results: Empty Directory
+
+Test case #2: mkdir please
+Results: Success
+
+Test case #3: stat please
+Results: Directory name: please
+		 Directory block: 2
+
+Test case #4: ls
+Results: please/
+
+Test case #5: cd please
+Results: success
+
+Test case #6: create file1
+Results: Success
+
+Test case #7: ls
+Results: file1
+
+Test case #8: append file1 hello_i_am_a_file
+Results: Success
+
+Test case #9: cat file1
+Results: hello_i_am_a_file
+
+Test case #10: head file1 10
+Results: hello_i_am
+
+Test case #11: rm file1
+Results: success
+
+Test case #12: home
+Results: success
+
+Test case #12: ls
+Results: please/
+
+Test case #13: mkdir test
+Results: success
+
+Test case #14: ls
+Results: please/ test/
+
+Test case #15: cd please
+Result: success 
+
+Test case #16: create file1
+Results: success
+
+Test case #17: stat file1
+Results: Inode block: x
+		 Bytes in file: x
+		 Number of blocks: x	
+		 first block: x
+
+Test case #18: home
+Results: success
+
+Test case #19: rmdir please
+Results: 507: Directory is not empty
+
+Test case #20: cd please
+Results: success
+
+test case #21: rm file1
+Results: success
+
+test case #22: home
+Results: success
+
+Test case #23: rmdir please
+Results: success
+
+Test case #24: ls
+Results: test/
+
+Test case #25: create asa;lsdkjf;alskdfja;slkdfja;sldkfja;sldkfja;sldkfja;sldkfja
+Results: 504: File name too long 
+ 
+...
